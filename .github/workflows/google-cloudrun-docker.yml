@@ -76,10 +76,10 @@ jobs:
           DOCKER_TAG="$${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.SERVICE }}:${{ github.sha }}"
           docker build --tag "${DOCKER_TAG}" .
           docker push "${DOCKER_TAG}"
-      - name: 'Deploy to Cloud Run'
 
-        # END - Docker auth and build
 
+      - id: 'deploy'
+        name: 'Deploy to Cloud Run'
         uses: 'google-github-actions/deploy-cloudrun@v2' # google-github-actions/deploy-cloudrun@v2
         with:
           service: '${{ env.SERVICE }}'
