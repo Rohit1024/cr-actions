@@ -36,8 +36,8 @@ on:
 
 env:
   PROJECT_ID: "${{ secrets.PROJECT_ID }}" # TODO: update to your Google Cloud project ID
-  REGION: 'us-central1' # TODO: update to your region
-  SERVICE: 'europe-west1' # TODO: update to your service name
+  REGION: 'europe-west1' # TODO: update to your region
+  SERVICE: 'service-test' # TODO: update to your service name
 
 jobs:
   deploy:
